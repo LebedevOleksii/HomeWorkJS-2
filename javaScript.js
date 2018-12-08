@@ -115,12 +115,23 @@ const dinner = {
   .catch((err)=>{                            
     console.log('Дякую, але це забагато.')
   });
+  //__________________________________________
+
+  const eating = async (x, y, z ,d) => {
+    await dinner.eatSoup(x);
+    await dinner.eatDumplings(y);
+    await dinner.eatDessert(z);
+    await dinner.drinkCoffee(d)
+  }
+
+  eating(13,15,1,1)
+
 
 // --------------------TASK 5-----------------------//
 
 function isPrime(num) {
     if(num > 2) {
-      for(var i = 2; i < num; i++){
+      for(i = 2; i < num; i++){
      if(num % i === 0) {
        break;
      }
@@ -131,9 +142,8 @@ function isPrime(num) {
   isPrime(num-1);
             
     }else{
-    console.log(num,1);
-  }
-     
+    console.log(num);
+  }   
 }
 isPrime(10)
 
